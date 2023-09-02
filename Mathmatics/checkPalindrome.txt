@@ -1,0 +1,21 @@
+// 121 is plaindrome number
+
+
+func isPalindrome(number: Int) -> Bool {
+    var value = number
+    var remainder = 0
+    var result = 0
+    while value > 0 {
+        remainder = value % 10
+        result = result * 10 + remainder
+        value = value / 10
+    }
+    if result == number {
+        return true
+    }else{
+        return false
+    }
+}
+
+let res = isPalindrome(number: 121)
+print(res)

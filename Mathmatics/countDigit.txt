@@ -1,0 +1,19 @@
+// count total digits in an number eg:- 123 -> 3 digit
+
+
+func countDigits(digits: Int) -> Int {
+    var count = 0
+    var number = digits
+    while number > 0 {
+        number = number / 10 
+        count += 1
+    }
+    return count
+}
+
+let res = countDigits(digits: 123)
+print(res)
+
+
+
+
