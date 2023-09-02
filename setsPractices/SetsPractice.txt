@@ -1,0 +1,65 @@
+
+print("---------Sets Practice--------")
+
+//Create EmptySets
+var colors = Set<String>()
+print(colors)                      // []
+print(colors.count)                // 0
+
+
+//initialization of sets
+colors = ["black","blue","white","green","red"]    
+print(colors)                       // ["green","red","black","blue","white"]
+
+//insert item in sets
+colors.insert("yellow")
+print(colors)                      // ["green","yellow","red","black","blue","white"]
+
+
+//check set is empty or not 
+if colors.isEmpty {
+    print("EmptySets")
+}else{
+    print("Not EmptySets")         //Not EmptySets
+}
+
+// remove an item from set 
+colors.remove("red")
+print(colors)                     // ["black","blue","white","green","yellow"]
+
+//check an item is present or not in set 
+if colors.contains("red"){
+    print("Yes contained")
+}else{
+    print("Not contained")        //Not contained
+}
+
+
+//iterate over a set 
+for color in colors {
+    print(color)
+}
+
+
+var setOne: Set<Int> = [1, 2, 3, 4, 5]
+print(setOne)                                //[3, 4, 5, 1, 2]
+
+var setSecond: Set<Int> = [3, 4, 5, 6, 7, 8]
+print(setSecond)                             //[4, 7, 6, 5, 8, 3]
+
+//union of two set
+var unionOfSets = setOne.union(setSecond).sorted()
+print(unionOfSets)                              //[1, 2, 3, 4, 5, 6, 7, 8]
+
+//intersection of two set
+var intersectionOfSets = setOne.intersection(setSecond).sorted()
+print(intersectionOfSets)                        //[3, 4, 5]
+
+//symmetric of two set
+var symmetricDifferenceOfSet = setOne.symmetricDifference(setSecond).sorted()
+print(symmetricDifferenceOfSet)                  //[1, 2, 6, 7, 8]
+
+//subtraction of two set
+var subtractinOfSet = setOne.subtracting(setSecond).sorted()
+print(subtractinOfSet)                            //[1, 2]
+
