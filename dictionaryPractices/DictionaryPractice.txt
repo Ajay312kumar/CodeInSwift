@@ -1,0 +1,32 @@
+                            * Practice Over Dictionary *
+//create a Empty Dictionary
+var emptyDictionary:[Int: String] = [:]
+print(emptyDictionary)                  //[:]
+
+//create Dictionary leteral
+var item:[String: String] = ["UP":"INDIA","PATNA":"BIHAR"]
+print(item)                          //["PATNA": "BIHAR", "UP": "INDIA"]
+
+//update Dictionary but using below method will return old value
+if let oldValue = item.updateValue("UP", forKey: "india"){
+    print("the value of oldValue is \(oldValue)")   
+}
+
+//retrieve item through key
+if let retrieve = item["UP"] {
+    print(retrieve)                  //INDIA
+}
+
+//remove item through key
+item["UP"] = nil
+print(item)                        //["india": "UP", "PATNA": "BIHAR"]
+
+if let removedValue = item.removeValue(forKey:"PATNA"){
+      print("The removed removedValue's name is \(removedValue).")    //The removed removedValue's name is BIHAR.
+}
+
+//iterate Over a Dictionary
+var countryDictionary:[String:String] = ["India":"Delhi", "Nepal":"kathmandu"]
+for (country, capital) in countryDictionary{
+    print("capital of \(country) is \(capital)")
+}
