@@ -1,0 +1,7 @@
+print("factorial of a number is")
+var fact = 1
+var number = 5
+for i in 1...number{
+    fact = fact*i
+}
+print(fact)
