@@ -1,0 +1,41 @@
+print(" ----1 to n Numbers---- ")
+for i in 1...5 {
+    print(i)
+}
+
+// *
+// **
+// ***
+// ****
+// *****
+
+print("-----triangular shape star pattern------")
+for i in 1...5 {
+    for _ in 1...i {
+        print("*",terminator:"")
+    }
+    print("")
+}
+
+/*
+*****
+*****
+*****
+*****
+*****
+*/
+
+
+print("-----------Square pattern-------------")
+var n = 5
+var nst = n
+var row = 1
+while row <= n {
+    var ns = 1
+    while ns <= nst {
+        print("*", terminator: "")
+        ns = ns + 1
+    }
+    print("")
+    row += 1
+}
