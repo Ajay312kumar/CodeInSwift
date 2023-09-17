@@ -1,0 +1,14 @@
+print("GCD of two Number")
+
+func gcd(_ a: Int, _ b: Int) -> Int {
+    if b == 0 {
+        return a
+    }
+    else{
+        return gcd(b, a%b)
+    }
+}
+
+print(gcd(4,6)) 
+
+//output : 2
